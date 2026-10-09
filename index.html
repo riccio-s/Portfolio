@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport"
+	content="width=device-width,
+	initial-scale=1.0">
+	<title>Portfolio Sara Riccio</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+  </head>
+  
+  <body>
+	<header class "header">
+		<a href="#" class="logo"><span>SARA RICCIO</span></a>
+		
+		<ul class="nav-links">
+		
+			<li>
+				<a href="#about">ABOUT</a>
+			</li>
+		
+			<li>
+				<a href="#graphics-projects">GRAPHICS</a>
+			</li>
+			
+			<li>
+				<a href="#other-projects">OTHER PROJECTS</a>
+			</li>
+		
+			<li>
+				<a href="#visual-art">VISUAL ART</a>
+			</li>
+		
+		</ul>
+		
+		<i class="fa-solid fa-bars"id="menu-icon"></i>
+		
+	</header>
+	
+	
+	
+	
+	
+	<section id="about" class="about">
+	
+	
+		<h2>ABOUT</h2>
+		
+		<div class="text">
+				<p>Hi, I'm Sara Riccio</p>
+				<p>I graduated in March 2026 in Mathematical Sciences for Artificial Intelligence
+				at Sapienza, in Rome. <br>I will be enrolling in the Computer Science master at Sapienza this year. 
+				</p>
+				<p>My interests include computer graphics, animation and illustration.</p>
+				
+				
+				<p>Email me at: <a href='mailto:ricciosara2003@gmail.com' class='GHlink'>ricciosara@gmail.com</a>
+				<br>
+				Github: <a href='https://github.com/riccio-s' class='GHlink'>riccio-s</a></p>
+				
+		</div>
+	
+	</section>
+	
+	<section id="graphics-projects" class="graphics-projects">
+		<h2>GRAPHICS</h2>
+		<br>
+		
+		<div class = 'GPsubsection'>
+			<h1>MARIONETTE</h1>
+			<ul class='carousel' id='marionette'>
+				<li >
+						<video  controls height="300rem">
+						<source src="./assets/marionette2.mp4" type="video/mp4" />
+						</video>
+					<div class='descrizione'>
+						<h1>Interactive, physics based animation</h1>
+						<a href="https://sapienzainteractivegraphicscourse.github.io/final-project-marionette/" class='GHlink'>Here you can try the simulation</a>
+						<br>
+						<a href="https://github.com/SapienzaInteractiveGraphicsCourse/final-project-marionette" class='GHlink'>Github repository of the project</a>
+						<p>On the left you can see a video of the physics simulation.</p>
+						<p>The project has been realized in javascript using the libraries three.js, cannon.js, tween.js</p>
+						<p>The marionette is constituted of three.js primitive meshes, which are bound to cannon.js bodies; cannon.js is a physics library
+						that computes at each instant the position and rotation of the bodies in space.</p>
+						<br>
+						<p class='advice'>scroll to the right to see more on the project</p>
+					</div>
+			
+				</li>
+				<li >
+					<img src='\assets\ropes.png' height="300rem">
+					
+					<div class='descrizione'>
+						<h1>Bodies and Constraints</h1>
+						<p>The only forces present in the cannon.js world are gravity and elastic forces given by the constraints that hold the bodies together </p>
+						<p>The marionette's body primitives are connected with constraints of the class ConeTwistConstraints, that allow rotation within a given degree from a given point. 
+						In the simulation there are five ropes, they are made entirely of box meshes bound to box physical bodies that are held together by constraints of the cannon.js class LockConstraint. 
+						This solution allows to obtain ropes that move smoothly and give the illusion of being continuous lines.</p>
+						<p>Using the GUI the user can change the number of boxes that constitute a rope, and so its length.</p>
+						<p>The cross used to control the marionette is a static body; this means that it's not affected by gravity.</p>
+						<p>It's possible to drag with the cursor the meshes of the marionette (I implemented this using the three.js DragControls). 
+						Whenever a mesh is dragged into a new position the other meshes follow.</p>
+						
+						<br>
+						<p class='advice'>scroll to the right to see more on the project</p>
+					</div>
+				</li>
+				<li >
+				<img src='\assets\hair.png' height="300rem">
+					<img src='\assets\mantle.png' height="300rem">
+					
+					<div class='descrizione'>
+						<h1>Hair and Mantle</h1>
+						<p>I added a toggle in the GUI that enables and disables the hair. The hair is created with the same logic as the ropes: 
+						each individual hair is a chain of boxes joined by cannon.js LockConstraints.</p>
+						<p>The mantle is another object that can be enabled or disabled using the GUI.</p>
+						<p>The mantle mesh is a plane, and at each frame the position of each of the plane vertices is updated 
+						to the position of cannon.js particles that are held together by cannon.js DistanceConstraints. 
+						Constraints of this class are used to keep the distance between two objects constant.</p>
+						<br>
+						<p class='advice'>scroll to the right to see more on the project</p>
+					</div>
+				</li>
+				<li >
+					<img src='\assets\galaxy.png' height="300rem">
+					<img src='\assets\water.png' height="300rem">
+					<img src='\assets\circus.png' height="300rem">
+					<img src='\assets\trees.png' height="300rem">
+					<div class='descrizione'>
+						<h1>Lighting and Particles</h1>
+						<p>I added to the scene two direct lights (one is cyan and the other blue) a white ambient light and a spotlight, that rotates at every frame.</p>
+						<p>The three.js spotlight supports textures, this means that a given image can be projected on the elements of the scene. 
+						The user can change the projected image as seen in the picture on the left.</p>
+						<p>Shadows are generated using three.js shadow maps for each of the directional lights and for the spotlight.</p>
+						<br>
+						<p>To each projected texture correspond different background particles. 
+						These particles are three.js Points: a texture is associated at each given vertex; 
+						the size of the texture gets smaller the further away a point is from the camera.
+						Each point is always facing the camera and so the final effect is a cloud of small two dimensional images.</p>
+					</div>
+				</li>
+			</ul>
+		
+			<br>
+			<h1>WALL CLIMBING<h1>
+		
+			<ul class='carousel' id='wall-climbing'>
+			<li >
+				<div class='descrizione'>
+					<h1>Physics based animation applied to a character with armature</h1>
+					
+					<a href="https://github.com/riccio-s/wall-climbing" class='GHlink'>Github repository of the project</a>
+					<p>After making the marionette; I wondered if I could apply the physics animation obtained with cannon.js bodies
+					to a more complex character, which I designed in blender.</p>
+					<p>To reach the top of the wall, the climber navigates a graph and chooses the handles to put hands and feet on.</p>
+					<p>This is an unfinished project I'm currently working on.</p>
+					<p>The project has been realised in javscript with the libraries three.js, cannon.js and tween.js</p>
+					<br>
+					<p class='advice'>scroll to the right to see more on the project</p>
+				</div>
+				<video controls height="300rem">
+					<source src="./assets/wall-climbing.mp4" type="video/mp4" />
+				</video>
+			</li>
+			<li >
+				<video controls height="300rem">
+					<source src="./assets/graph-climbing.mp4" type="video/mp4" />
+				</video>
+				<div class='descrizione'>
+					<h1>Graph navigation</h1>
+					<p> Initially, the climbing handles are placed randomly on the wall. 
+					The handles constitute the nodes of a directed acyclic graph: there is an edge between two nodes when they are within
+					a given distance and the edge is directed from the lower to the highest node.</p>
+					<p>Before the animation starts, a path is calculated for each effector (hands and feet of the character)
+					using a modified BFS algorithm that takes into account the distance between the diffent effectors at every instant and
+					favors chosing handles on the left for the left hand and foot, and handles on the right for the right hand and foot.</p>
+					<p>The algorithm stops when the nodes at the top of the wall are reached</p>
+					<br>
+					<p class='advice'>scroll to the right to see more on the project</p>
+				</div>
+			</li>
+			<li >
+				<video controls height="300rem">
+					<source src="./assets/bones-climbing.mp4" type="video/mp4" />
+				</video>
+				<img src='\assets\wall-climbing-model.png' height="300rem">
+				<div class='descrizione'>
+					<h1>Model armature and physics bodies</h1>
+					
+					<p>Here you can see the model of the climber created in blender; with its armature.
+					I manually weight-painted the meshes in blender to determine the influence of each bone to the different parts of the model.</p>
+					<p>Each bone in the armature follows the movement of a cannon.js body; 
+					you can see the body primitives (including the backpack and the ponytail) in the video on the left.</p>
+					<p>The hands and feet movement is determined by the navigation algorithm, and so these effectors move from handle to handle
+					at the established times; the interpolation between the different final positions is achieved by using tweens.</p>
+				</div>
+			</li>
+			</ul>
+		
+			<br>
+			<h1>EXERCISES<h1>
+			<ul class='carousel' id='exercises'>
+			<li >
+				<div class='image-container'>
+					<img src='\assets\texturescreen.png' height="200rem">
+					<img src='\assets\lightingscreen.png' height="200rem">
+				</div>
+				
+				<div class='descrizione'>
+					<h1>Computer graphics basics</h1>
+					<br>
+					<p>I studied independently the course Introduction to Computer Graphics by Utah professor Cem Yuksel,
+					which is free on Youtube: <a href="https://www.youtube.com/watch?v=vLSphLtKQ0o&list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh&pp=0gcJCQ4DOCosWNin" class='GHlink'>Introduction to Computer Graphics</a>. </p>
+					
+					<p>Thanks to this course I learned the fundamentals of graphics programming, and I got apply them to WebGL projects, writing shader code in GLSL.</p>
+					<p>Here are some of the homeworks that I made; the assignments are available on the course's site: 
+					<a href="https://graphics.cs.utah.edu/courses/cs4600/fall2020/?prj=4" class='GHlink'>Assignments.</a></p>
+					<p class='advice'>scroll to the right to see the homeworks on meshes and textures, shading, ray tracing</p>
+				</div>
+				<img src='\assets\RTscreen.png' height="250rem">
+			</li>
+			<li >
+				<video id='texture' controls height="300rem">
+						<source src="./assets/texture.mp4" type="video/mp4" />
+				</video>
+				<div class='descrizione'>
+					<h1>Meshes and Textures</h1>
+					<p>Transformation matrix javascript function, that combines the translation, rotation and perspective projection matrices. </p>
+					<p>Implementation of a javascript class with methods that set a mesh from an OBJ file, swap the y and z coordinates, set and show a texture,
+					 render the triangles of the mesh knowing the transformation matrix. </p>
+					<br>
+					<p class='advice'>scroll to the right to see more</p>
+				</div>
+			</li>
+			<li >
+				<video id='lighting' controls height="300rem">
+						<source src="./assets/lighting.mp4" type="video/mp4" />
+				</video>
+				<div class='descrizione'>
+				<h1>Shading</h1>
+				<br>
+				<p>Shading of an object based on the Blinn material model.</p>
+				<p>Addition of a directional light to the previous project and a method to set the light's direction.
+				The normals of the object and the model-view matrix are passed to the vertex shader and then the fragment shader to calculate the value of a fragment.
+				The user can change the shininess parameter of the Blinn model through the UI.</p>
+				<p class='advice'>scroll to the right to see more</p>
+				</div>
+			</li>
+			<li >
+				<video id='ray-tracing' controls height="300rem">
+						<source src="./assets/ray-tracing.mp4" type="video/mp4" />
+				</video>
+				<div class='descrizione'>
+				<h1>Ray Tracing</h1>
+				<p>Implementation of a ray tracer:</p>
+				<p> For each pixel of the screen, a fragment shader is called that performs ray tracing.</p>
+				<p> The only objects in the scene are spheres with different specular coefficients.</p>
+				<p> Computation of intersections of the rays with the implicit spheres, to calculate shadows and reflections.
+				When there are no intersections, the reflected image is an environment map.</p>
+				<p>The number of secondary rays that are generated is limited by a bounce limit, that can be set on the UI. </p>
+				<p></p>
+				</div>
+			</li>
+			</ul>
+			<br>
+		</div>
+	
+	<section id="other-projects" class="other-projects">
+	<div class="subsection">
+		<h2>AUDIO DENOISING<h2>
+		<br>
+		<h3>U-NET FOR AUDIO DENOISING<h3>
+		<br>
+		<div class='textbox'>
+				
+				<div class='descrizione'>
+					<h1>Project description</h1>
+					<br>
+					<p>Team project developed in python on colab notebooks: <a href="https://github.com/riccio-s/U-Net-per-il-denoising-di-file-audio" class='GHlink'>Github repository of the project</a></p>
+					<p>We worked on songs snippets from the Free Music Archive; 
+					Using the library librosa we obtained Fourier transforms of the audio signals; to those we added gaussian noise. 
+					With this process we generated a noisy audio dataset. </p>
+					<p>The U-Net was created using PyTorch primitives with three main sections: encoder, bottleneck and decoder</p>
+					<p>Our goal was to implement a model that had to predict a clean signal from a noisy signal; 
+					so we trained the U-Net with the noisy transforms as inputs and the clean transforms as targets. </p>
+					<p>On the right you can see (in order) the spectrogram of a clean audio (ground truth), 
+					the spectrogram of the same audio with added noise, and the spectrogram of the predicted audio. </p>
+					
+				</div>
+				
+				<div class='image-container'>
+					<img src='\assets\spettrogramma_pulito.png' height="130">
+					<img src='\assets\spettrogramma_rumoroso.png' height="130">
+					<img src='\assets\spettrogramma_ricostruito.png' height="130">
+				</div>
+		</div>
+		
+	</div>
+	<br>
+	<div class="subsection">
+		<h2>THEATRE<h2>
+		<br>
+
+		<h3>IL MONDO DELLE MACCHINE<h3>
+		<br>
+		<ul class='carousel' id='mondo-macchine'>
+			<li >
+				<img src='\assets\mondo_macchine_0.png' height="400rem">
+				
+				<div class='descrizione'>
+					<h1>Scenography</h1>
+					
+					<p>I created the scenography for Il Mondo delle Macchine, a theatre performance at Associazione Culturale Controchiave.</p>
+					<p>For the same association I had also made some posters that you can see on the gallery below.</p>
+					<p>I made some digital illustrations and a 2D animation with the software Clip Studio Paint that were projected in the background during the show, which had to be timed
+					with the performance of the actors.</p>
+					<p>I also made the two posters that you can see on the sides of this description.</p>
+					<br>
+					<p class='advice'>scroll to the right to see more</p>
+				
+				</div>
+				<img src='\assets\mondo_macchine_1.png' height="400rem">
+			</li>
+			
+			<li id='blackbackground' >
+				<div class='media-container'>
+					<img src='\assets\mondo_macchine_2.jpeg' height="200rem">
+					<img src='\assets\mondo_macchine_3.jpeg' height="200rem">
+					<img src='\assets\sketch.png' height="200rem">
+					<img src='\assets\slide.png' height="200rem">
+					
+					<video aid="firstpart" controls height="300rem">
+						<source src="\assets\first-part.mp4">
+					</video>
+					<video id="secondpart" controls height="300rem">
+						<source src="\assets\second-part.mp4">
+					</video>
+				</div>
+			</li >
+				
+		</ul>
+	</div>
+	
+	</section>
+	
+	<section id="visual-art" class="visual-art">
+		<h2>ILLUSTRATIONS - POSTERS - SKETCHES<h2>
+		<div class="gallery">
+			
+			<div class="drawing">
+				<img src="assets/poster1.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/boa.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw5.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw6.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/poster2.jpg">
+			</div>
+			<div class="drawing">
+				<img src="assets/draw1.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw7.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw11.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw13.png">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw12.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw3.jpg">
+			</div>
+			<div class="drawing">
+				<img src="assets/draw14.png">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw16.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/poster0.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw15.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw2.jpg">
+			</div>
+			<div class="drawing">
+				<img src="assets/draw0.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw4.jpg">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/mosquito.png">
+			</div>
+			<div class="drawing">
+				<img src="assets/printed-mosquito.png">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw8.png">
+			</div>
+			
+			<div class="drawing">
+				<img src="assets/draw10.jpg">
+			</div>
+		
+		</div>
+	</section>
+	
+	
+  </body>
+</html>
