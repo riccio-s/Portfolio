@@ -307,25 +307,12 @@ p{
   scroll-snap-align: center;
 }
 
-
-
-#blackbackground{
-	background: black;
-	width:100%;
-}
-
 .subsection .descrizione {
 	border-radius:3rem;
 	background-color: white;
 	justify-content: center;
-	margin-right: 4rem;
-	padding-right:0rem;
 	color: rgb(90, 57, 110);
 	
-}
-
-.subsection .carousel li {
-	background: white;
 }
 
 .carousel li video{
